@@ -29,9 +29,28 @@ def main():
     )
 
     if 'title_clicked' not in st.session_state:
-        st.header('We can Help you')
-        if st.button('Click here to continue'):
+        st.title('Welcome to Hospital Finder')
+        st.markdown("""
+        ## Find hospitals that accept Aetna Insurance
+        Click the button below to start exploring.
+        """)
+
+        if st.button('Start Exploring'):
             st.session_state['title_clicked'] = True
+
+        st.markdown("""
+        ---
+        ## If You are a Santa Clara University Student
+        Visit the Cowell website [here](https://www.scu.edu/cowell/).
+        """)
+
+        st.markdown("""
+        ---
+        ## Important things to know before visiting a hospital:
+        - **Copay**: A fixed amount (for example, $15) you pay for a covered health care service, usually when you receive the service.
+        - **Deductible**: An amount you could owe during a coverage period (usually one year) for covered health care services before your plan begins to pay.
+        - **Maximum Out of Pocket**: The most you have to pay for covered services in a plan year.
+        """)
     else:
         st.title('Hospital Search Portal')
 
